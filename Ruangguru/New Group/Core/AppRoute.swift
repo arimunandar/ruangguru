@@ -15,7 +15,7 @@ class AppRouter {
 
 	fileprivate class func setup() -> Assembler {
 		let assemble = Assembler()
-		 assemble.apply(assemblies: [CategoryAssembly()])
+		 assemble.apply(assemblies: [CategoryAssembly(), QuestionAssembly()])
 		return assemble
 	}
 	

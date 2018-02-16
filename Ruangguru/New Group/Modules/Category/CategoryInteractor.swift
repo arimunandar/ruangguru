@@ -9,13 +9,16 @@
 //              * https://github.com/arimunandar
 
 import UIKit
+import RealmSwift
 
 protocol CategoryInteractorDelegate: class {
-	
+	func didSuccessFetchCategory(data: Results<CategoryEntity>)
 }
 
 protocol ICategoryInteractor: class {
 	var delegate: CategoryInteractorDelegate? { get set }
+	
+	func fetchCategoryData()
 }
 
 class CategoryInteractor: ICategoryInteractor {
@@ -25,5 +28,11 @@ class CategoryInteractor: ICategoryInteractor {
 	
 	init(manager: ICategoryDataManager) {
 		self.manager = manager
+	}
+	
+	func fetchCategoryData() {
+		self.manager?.fetchCategory(onSuccess: { (categories) in
+			self.delegate?.didSuccessFetchCategory(data: categories)
+		}, onFail: nil)
 	}
 }

@@ -10,6 +10,8 @@ pod 'RealmSwift'
 pod 'Alamofire'
 pod 'SwiftyJSON'
 pod 'Swinject'
+pod 'NotificationBannerSwift'
+pod 'NVActivityIndicatorView'
 
 end
 

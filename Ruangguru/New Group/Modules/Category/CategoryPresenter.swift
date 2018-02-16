@@ -9,9 +9,11 @@
 //              * https://github.com/arimunandar
 
 import UIKit
+import RealmSwift
 
 protocol ICategoryPresenter: class {
-	
+	func handleFetchCategory()
+	func navigateToQuestionPage(data: [String: Any])
 }
 
 class CategoryPresenter: ICategoryPresenter {
@@ -25,8 +27,19 @@ class CategoryPresenter: ICategoryPresenter {
 		self.wireframe = wireframe
 		self.view = view
 	}
+	
+	func handleFetchCategory() {
+		self.interactor?.fetchCategoryData()
+	}
+	
+	func navigateToQuestionPage(data: [String : Any]) {
+		self.wireframe?.navigateToQuestionPage(data: data)
+	}
 }
 
 extension CategoryPresenter: CategoryInteractorDelegate {
 	
+	func didSuccessFetchCategory(data: Results<CategoryEntity>) {
+		self.view?.displayData(data: data)
+	}
 }

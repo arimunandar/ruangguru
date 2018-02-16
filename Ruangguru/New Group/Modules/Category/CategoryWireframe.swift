@@ -11,7 +11,7 @@
 import UIKit
 
 protocol ICategoryWireframe: class {
-	
+	func navigateToQuestionPage(data: [String: Any])
 }
 
 class CategoryWireframe: ICategoryWireframe {
@@ -20,5 +20,10 @@ class CategoryWireframe: ICategoryWireframe {
 	
 	init(view: CategoryViewController) {
 		self.view = view
+	}
+	
+	func navigateToQuestionPage(data: [String : Any]) {
+		let question = AppRouter.present().resolve(QuestionViewController.self, argument: data)
+		self.view?.navigationController?.pushViewController(question!, animated: true)
 	}
 }

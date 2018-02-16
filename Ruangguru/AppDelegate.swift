@@ -17,12 +17,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 		
 		UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
-		UINavigationBar.appearance().tintColor = UIColor.green
-		UINavigationBar.appearance().barTintColor = .white
+		UINavigationBar.appearance().tintColor = UIColor.white
+		UINavigationBar.appearance().barTintColor = UIColor.purple
 		UINavigationBar.appearance().isTranslucent = false
 		UINavigationBar.appearance().clipsToBounds = false
-		UINavigationBar.appearance().backgroundColor = .white
-		UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.green]
+		UINavigationBar.appearance().backgroundColor = UIColor.purple
+		UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
 		
 		let root = AppRouter.present().resolve(CategoryViewController.self)
 		
