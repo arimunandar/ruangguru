@@ -1,6 +1,0 @@
-framework module Pods_Ruangguru {
-  umbrella header "Pods-Ruangguru-umbrella.h"
-
-  export *
-  module * { export * }
-}
