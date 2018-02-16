@@ -12,6 +12,15 @@
 		F423725720357D9C00A3F5AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F423725520357D9C00A3F5AC /* Main.storyboard */; };
 		F423725920357D9C00A3F5AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F423725820357D9C00A3F5AC /* Assets.xcassets */; };
 		F423725C20357D9C00A3F5AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F423725A20357D9C00A3F5AC /* LaunchScreen.storyboard */; };
+		F458C7DD2036769800AA052D /* AppRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458C7DC2036769800AA052D /* AppRoute.swift */; };
+		F458C7E7203676C200AA052D /* CategoryPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458C7DF203676C200AA052D /* CategoryPresenter.swift */; };
+		F458C7E8203676C200AA052D /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458C7E0203676C200AA052D /* CategoryViewController.swift */; };
+		F458C7E9203676C200AA052D /* CategoryAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458C7E1203676C200AA052D /* CategoryAssembly.swift */; };
+		F458C7EA203676C200AA052D /* CategoryInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458C7E2203676C200AA052D /* CategoryInteractor.swift */; };
+		F458C7EB203676C200AA052D /* CategoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458C7E3203676C200AA052D /* CategoryModel.swift */; };
+		F458C7EC203676C200AA052D /* CategoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F458C7E4203676C200AA052D /* CategoryViewController.xib */; };
+		F458C7ED203676C200AA052D /* CategoryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458C7E5203676C200AA052D /* CategoryManager.swift */; };
+		F458C7EE203676C200AA052D /* CategoryWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458C7E6203676C200AA052D /* CategoryWireframe.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +34,15 @@
 		F423725B20357D9C00A3F5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F423725D20357D9C00A3F5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F423726320357DBE00A3F5AC /* Ruangguru.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ruangguru.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		F458C7DC2036769800AA052D /* AppRoute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
+		F458C7DF203676C200AA052D /* CategoryPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryPresenter.swift; sourceTree = "<group>"; };
+		F458C7E0203676C200AA052D /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		F458C7E1203676C200AA052D /* CategoryAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryAssembly.swift; sourceTree = "<group>"; };
+		F458C7E2203676C200AA052D /* CategoryInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryInteractor.swift; sourceTree = "<group>"; };
+		F458C7E3203676C200AA052D /* CategoryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryModel.swift; sourceTree = "<group>"; };
+		F458C7E4203676C200AA052D /* CategoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryViewController.xib; sourceTree = "<group>"; };
+		F458C7E5203676C200AA052D /* CategoryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryManager.swift; sourceTree = "<group>"; };
+		F458C7E6203676C200AA052D /* CategoryWireframe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryWireframe.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +96,7 @@
 		F423725020357D9C00A3F5AC /* Ruangguru */ = {
 			isa = PBXGroup;
 			children = (
+				F458C7D32036761C00AA052D /* Classes */,
 				F423725120357D9C00A3F5AC /* AppDelegate.swift */,
 				F423725520357D9C00A3F5AC /* Main.storyboard */,
 				F423725820357D9C00A3F5AC /* Assets.xcassets */,
@@ -85,6 +104,111 @@
 				F423725D20357D9C00A3F5AC /* Info.plist */,
 			);
 			path = Ruangguru;
+			sourceTree = "<group>";
+		};
+		F458C7D32036761C00AA052D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				F458C7D62036763500AA052D /* Assemblies */,
+				F458C7D52036762E00AA052D /* Core */,
+				F458C7D92036764F00AA052D /* Helpers */,
+				F458C7D72036763C00AA052D /* Managers */,
+				F458C7D82036764300AA052D /* Models */,
+				F458C7D42036762700AA052D /* Modules */,
+				F458C7DB2036766F00AA052D /* Network */,
+				F458C7DA2036766800AA052D /* Services */,
+			);
+			name = Classes;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		F458C7D42036762700AA052D /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				F458C7DE203676B200AA052D /* Category */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		F458C7D52036762E00AA052D /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F458C7DC2036769800AA052D /* AppRoute.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		F458C7D62036763500AA052D /* Assemblies */ = {
+			isa = PBXGroup;
+			children = (
+				F458C7E1203676C200AA052D /* CategoryAssembly.swift */,
+			);
+			path = Assemblies;
+			sourceTree = "<group>";
+		};
+		F458C7D72036763C00AA052D /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F458C7F0203676DB00AA052D /* Category */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F458C7D82036764300AA052D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F458C7EF203676D500AA052D /* Category */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F458C7D92036764F00AA052D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		F458C7DA2036766800AA052D /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F458C7DB2036766F00AA052D /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		F458C7DE203676B200AA052D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F458C7DF203676C200AA052D /* CategoryPresenter.swift */,
+				F458C7E0203676C200AA052D /* CategoryViewController.swift */,
+				F458C7E2203676C200AA052D /* CategoryInteractor.swift */,
+				F458C7E4203676C200AA052D /* CategoryViewController.xib */,
+				F458C7E6203676C200AA052D /* CategoryWireframe.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F458C7EF203676D500AA052D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F458C7E3203676C200AA052D /* CategoryModel.swift */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		F458C7F0203676DB00AA052D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				F458C7E5203676C200AA052D /* CategoryManager.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -149,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F458C7EC203676C200AA052D /* CategoryViewController.xib in Resources */,
 				F423725C20357D9C00A3F5AC /* LaunchScreen.storyboard in Resources */,
 				F423725920357D9C00A3F5AC /* Assets.xcassets in Resources */,
 				F423725720357D9C00A3F5AC /* Main.storyboard in Resources */,
@@ -224,7 +349,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F458C7EA203676C200AA052D /* CategoryInteractor.swift in Sources */,
+				F458C7ED203676C200AA052D /* CategoryManager.swift in Sources */,
+				F458C7E9203676C200AA052D /* CategoryAssembly.swift in Sources */,
+				F458C7E8203676C200AA052D /* CategoryViewController.swift in Sources */,
 				F423725220357D9C00A3F5AC /* AppDelegate.swift in Sources */,
+				F458C7EB203676C200AA052D /* CategoryModel.swift in Sources */,
+				F458C7E7203676C200AA052D /* CategoryPresenter.swift in Sources */,
+				F458C7EE203676C200AA052D /* CategoryWireframe.swift in Sources */,
+				F458C7DD2036769800AA052D /* AppRoute.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

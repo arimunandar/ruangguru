@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Ruangguru
 //
-//  Created by GREDU on 2/15/18.
+//  Created by Ari Munandar on 2/15/18.
 //  Copyright © 2018 Ari Munandar. All rights reserved.
 //
 
@@ -15,7 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
 	func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-		// Override point for customization after application launch.
+		
+		UINavigationBar.appearance().setBackgroundImage(UIImage(), for: .default)
+		UINavigationBar.appearance().tintColor = UIColor.green
+		UINavigationBar.appearance().barTintColor = .white
+		UINavigationBar.appearance().isTranslucent = false
+		UINavigationBar.appearance().clipsToBounds = false
+		UINavigationBar.appearance().backgroundColor = .white
+		UINavigationBar.appearance().titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.green]
+		
+		let root = AppRouter.present().resolve(CategoryViewController.self)
+		
+		window = UIWindow(frame: UIScreen.main.bounds)
+		window?.makeKeyAndVisible()
+		window?.rootViewController = UINavigationController(rootViewController: root!)
+		
 		return true
 	}
 
