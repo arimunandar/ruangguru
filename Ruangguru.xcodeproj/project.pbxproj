@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C77D248360AC3A23B1007362 /* Pods_Ruangguru.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3196A4527E158C870904E0BE /* Pods_Ruangguru.framework */; };
 		F423725220357D9C00A3F5AC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F423725120357D9C00A3F5AC /* AppDelegate.swift */; };
-		F423725420357D9C00A3F5AC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F423725320357D9C00A3F5AC /* ViewController.swift */; };
 		F423725720357D9C00A3F5AC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F423725520357D9C00A3F5AC /* Main.storyboard */; };
 		F423725920357D9C00A3F5AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F423725820357D9C00A3F5AC /* Assets.xcassets */; };
 		F423725C20357D9C00A3F5AC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F423725A20357D9C00A3F5AC /* LaunchScreen.storyboard */; };
@@ -21,7 +20,6 @@
 		6CE8E97949987178BEDCC62E /* Pods-Ruangguru.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Ruangguru.release.xcconfig"; path = "Pods/Target Support Files/Pods-Ruangguru/Pods-Ruangguru.release.xcconfig"; sourceTree = "<group>"; };
 		F423724E20357D9C00A3F5AC /* Ruangguru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ruangguru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F423725120357D9C00A3F5AC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F423725320357D9C00A3F5AC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F423725620357D9C00A3F5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F423725820357D9C00A3F5AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F423725B20357D9C00A3F5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				F423725120357D9C00A3F5AC /* AppDelegate.swift */,
-				F423725320357D9C00A3F5AC /* ViewController.swift */,
 				F423725520357D9C00A3F5AC /* Main.storyboard */,
 				F423725820357D9C00A3F5AC /* Assets.xcassets */,
 				F423725A20357D9C00A3F5AC /* LaunchScreen.storyboard */,
@@ -205,6 +202,7 @@
 				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
 				"${BUILT_PRODUCTS_DIR}/RealmSwift/RealmSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -212,6 +210,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RealmSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -225,7 +224,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F423725420357D9C00A3F5AC /* ViewController.swift in Sources */,
 				F423725220357D9C00A3F5AC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
