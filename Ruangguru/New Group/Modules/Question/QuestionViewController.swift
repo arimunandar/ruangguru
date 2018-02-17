@@ -192,7 +192,7 @@ extension QuestionViewController: QuestionFinishDelegate {
 extension QuestionViewController: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
 	
 	func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-		let width = self.view.frame.size.width - 24
+		let width = self.view.frame.size.width - 48
 		return CGSize(width: width / 2, height: 120)
 	}
 	
