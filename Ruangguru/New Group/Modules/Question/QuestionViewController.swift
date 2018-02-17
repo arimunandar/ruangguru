@@ -80,22 +80,21 @@ class QuestionViewController: UIViewController {
 	}
 	
 	@IBAction func handleNextQuestion(_ sender: Any) {
+		let correctCell = self.collectionView.cellForItem(at: IndexPath(item: self.correctAnswer?.index ?? 0, section: 0)) as! QuestionCollectionViewCell
+		let wrongCell = self.collectionView.cellForItem(at: IndexPath(item: self.selectAnswer?.index ?? 0, section: 0)) as! QuestionCollectionViewCell
 		if self.selectAnswer != nil {
 			switch self.checkingState {
 			case .checkingAnswer:
 				self.resultQuestion(onCorrect: {
-					let correctCell = self.collectionView.cellForItem(at: IndexPath(item: self.selectAnswer?.index ?? 0, section: 0)) as! QuestionCollectionViewCell
 					correctCell.selectAnswer(state: .correct)
 					correctCell.resultAnswerLabel.isHidden = false
 					correctCell.resultAnswerLabel.text = "Correct Answer!"
 					self.totalCorrectAnswer += 1
 					self.correctAnswerLabel.text = "\(self.totalCorrectAnswer) Right Answer"
 				}, onWrong: {
-					let correctCell = self.collectionView.cellForItem(at: IndexPath(item: self.correctAnswer?.index ?? 0, section: 0)) as! QuestionCollectionViewCell
 					correctCell.selectAnswer(state: .correct)
 					correctCell.resultAnswerLabel.isHidden = false
 					correctCell.resultAnswerLabel.text = "Correct Answer!"
-					let wrongCell = self.collectionView.cellForItem(at: IndexPath(item: self.selectAnswer?.index ?? 0, section: 0)) as! QuestionCollectionViewCell
 					wrongCell.selectAnswer(state: .wrong)
 					wrongCell.resultAnswerLabel.isHidden = false
 					wrongCell.resultAnswerLabel.text = "Wrong Answer!"
@@ -105,9 +104,7 @@ class QuestionViewController: UIViewController {
 				self.checkingState = .nextQuestion
 			case .nextQuestion:
 				self.blockerView.isHidden = true
-				let correctCell = self.collectionView.cellForItem(at: IndexPath(item: self.correctAnswer?.index ?? 0, section: 0)) as! QuestionCollectionViewCell
-				correctCell.resultAnswerLabel.isHidden = true
-				let wrongCell = self.collectionView.cellForItem(at: IndexPath(item: self.selectAnswer?.index ?? 0, section: 0)) as! QuestionCollectionViewCell
+				correctCell.resultAnswerLabel.isHidden = true				
 				wrongCell.resultAnswerLabel.isHidden = true
 				if self.questionNumber < self.data?.count ?? 0 {
 					self.prepareData()
