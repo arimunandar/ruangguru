@@ -14,7 +14,8 @@ import RealmSwift
 protocol IQuestionPresenter: class {
 	var parameters: [String: Any]? { get set }
 	
-	func handleFetchQuestion(categoryId: Int)	
+	func handleFetchQuestion(categoryId: Int)
+	func handleStarOver()
 }
 
 class QuestionPresenter: IQuestionPresenter {
@@ -32,6 +33,10 @@ class QuestionPresenter: IQuestionPresenter {
 	
 	func handleFetchQuestion(categoryId: Int) {
 		self.interactor?.fetchQuestionData(categoryId: categoryId)
+	}
+	
+	func handleStarOver() {
+		self.wireframe?.dismissView()
 	}
 }
 

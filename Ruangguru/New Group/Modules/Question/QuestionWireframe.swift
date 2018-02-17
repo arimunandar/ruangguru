@@ -23,6 +23,7 @@ class QuestionWireframe: IQuestionWireframe {
 	}
 	
 	func dismissView() {
+		self.view?.navigationController?.isNavigationBarHidden = false
 		self.view?.navigationController?.popViewController(animated: true)
 	}
 }

@@ -32,12 +32,21 @@ class QuestionViewController: UIViewController {
 	@IBOutlet weak var questionDatailLabel: UILabel!
 	@IBOutlet weak var collectionView: UICollectionView!
 	@IBOutlet weak var nextButton: UIButton!
+	
 	private lazy var blockerView: UIView = {
 		let view = UIView()
 		view.backgroundColor = UIColor.white.withAlphaComponent(0)
 		view.isHidden = true
 		view.frame = self.collectionView.frame
 		self.view.addSubview(view)
+		return view
+	}()
+	
+	private lazy var finishView: QuestionFinishView = {
+		let view = Bundle.main.loadNibNamed("QuestionFinishView", owner: self, options: nil)?.first as! QuestionFinishView
+		view.frame = self.view.frame
+		view.isHidden = true
+		view.delegate = self
 		return view
 	}()
 	
@@ -77,6 +86,7 @@ class QuestionViewController: UIViewController {
 	
 	private func setupComponent() {
 		self.collectionView.register(UINib(nibName: "QuestionCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "Cells")
+		self.view.addSubview(finishView)
 	}
 	
 	@IBAction func handleNextQuestion(_ sender: Any) {
@@ -99,9 +109,15 @@ class QuestionViewController: UIViewController {
 					wrongCell.resultAnswerLabel.isHidden = false
 					wrongCell.resultAnswerLabel.text = "Wrong Answer!"
 				})
+				
 				self.blockerView.isHidden = false
-				self.nextButton.setTitle("Next Question!", for: .normal)
-				self.checkingState = .nextQuestion
+				if self.questionNumber < self.data?.count ?? 0 {
+					self.nextButton.setTitle("Next Question!", for: .normal)
+					self.checkingState = .nextQuestion
+				} else {
+					self.nextButton.setTitle("Finish Game!", for: .normal)
+					self.checkingState = .finishGame
+				}
 			case .nextQuestion:
 				self.blockerView.isHidden = true
 				correctCell.resultAnswerLabel.isHidden = true				
@@ -115,7 +131,11 @@ class QuestionViewController: UIViewController {
 					self.checkingState = .finishGame
 				}
 			case .finishGame:
+				self.blockerView.isHidden = true
 				self.collectionView.reloadData()
+				self.finishView.isHidden = false
+				self.finishView.scoreLabel.text = "\(self.totalCorrectAnswer)"
+				self.navigationController?.isNavigationBarHidden = true
 			}
 		}
 	}
@@ -159,6 +179,13 @@ extension QuestionViewController: IQuestionViewController {
 	func displayQuestionData(data: Results<QuestionEntity>) {
 		self.data = data
 		self.prepareData()
+	}
+}
+
+extension QuestionViewController: QuestionFinishDelegate {
+	
+	func handleStartOver() {
+		self.presenter?.handleStarOver()
 	}
 }
 

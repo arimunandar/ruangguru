@@ -44,6 +44,8 @@
 		F458C8252036DA7B00AA052D /* QuestionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458C8232036DA7B00AA052D /* QuestionEntity.swift */; };
 		F458C8262036DA7B00AA052D /* QuestionEntityRoot.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458C8242036DA7B00AA052D /* QuestionEntityRoot.swift */; };
 		F458C8282036EEF600AA052D /* Extension+Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458C8272036EEF600AA052D /* Extension+Global.swift */; };
+		F458C82D2037E4ED00AA052D /* QuestionFinishView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F458C82C2037E4ED00AA052D /* QuestionFinishView.xib */; };
+		F458C82F2037E4FD00AA052D /* QuestionFinishView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F458C82E2037E4FD00AA052D /* QuestionFinishView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +91,8 @@
 		F458C8232036DA7B00AA052D /* QuestionEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionEntity.swift; sourceTree = "<group>"; };
 		F458C8242036DA7B00AA052D /* QuestionEntityRoot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionEntityRoot.swift; sourceTree = "<group>"; };
 		F458C8272036EEF600AA052D /* Extension+Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Global.swift"; sourceTree = "<group>"; };
+		F458C82C2037E4ED00AA052D /* QuestionFinishView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = QuestionFinishView.xib; sourceTree = "<group>"; };
+		F458C82E2037E4FD00AA052D /* QuestionFinishView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFinishView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +320,7 @@
 		F458C80A2036C26200AA052D /* Question */ = {
 			isa = PBXGroup;
 			children = (
+				F458C82B2037E4C500AA052D /* Subviews */,
 				F458C81E2036C64D00AA052D /* Cells */,
 				F458C80B2036C27600AA052D /* QuestionPresenter.swift */,
 				F458C80C2036C27600AA052D /* QuestionViewController.swift */,
@@ -358,6 +363,15 @@
 				F458C8202036C65D00AA052D /* QuestionCollectionViewCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		F458C82B2037E4C500AA052D /* Subviews */ = {
+			isa = PBXGroup;
+			children = (
+				F458C82C2037E4ED00AA052D /* QuestionFinishView.xib */,
+				F458C82E2037E4FD00AA052D /* QuestionFinishView.swift */,
+			);
+			path = Subviews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -425,6 +439,7 @@
 				F458C8222036C65D00AA052D /* QuestionCollectionViewCell.xib in Resources */,
 				F458C7EC203676C200AA052D /* CategoryViewController.xib in Resources */,
 				F458C7F820367BB800AA052D /* CategoryCollectionViewCell.xib in Resources */,
+				F458C82D2037E4ED00AA052D /* QuestionFinishView.xib in Resources */,
 				F458C8182036C27700AA052D /* QuestionViewController.xib in Resources */,
 				F423725C20357D9C00A3F5AC /* LaunchScreen.storyboard in Resources */,
 				F423725920357D9C00A3F5AC /* Assets.xcassets in Resources */,
@@ -532,6 +547,7 @@
 				F458C8282036EEF600AA052D /* Extension+Global.swift in Sources */,
 				F458C8252036DA7B00AA052D /* QuestionEntity.swift in Sources */,
 				F458C7EE203676C200AA052D /* CategoryWireframe.swift in Sources */,
+				F458C82F2037E4FD00AA052D /* QuestionFinishView.swift in Sources */,
 				F458C8172036C27600AA052D /* QuestionModel.swift in Sources */,
 				F458C8042036A4EE00AA052D /* CategoryEntity.swift in Sources */,
 				F458C7DD2036769800AA052D /* AppRoute.swift in Sources */,
