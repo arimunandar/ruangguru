@@ -41,13 +41,13 @@ class BaseClient<Element: BaseEntity> {
 						let data = JSON(value)
 						onSuccess(Element(json: data))
 					case .failure:
-						BaseClient.setAlert(title: "Peringatan!", message: "Terjadi kesalahan pada sistem", style: .danger)
+						BaseClient.setAlert(title: "Warning!", message: "Internal Server Error", style: .danger)
 					}
 				}
 			}
 		} else {
 			NVActivityIndicatorPresenter.sharedInstance.stopAnimating()
-			BaseClient.setAlert(title: "Peringatan!", message: "Terjadi kesalahan pada koneksi internet", style: .danger)
+			BaseClient.setAlert(title: "Warning!", message: "No Internet Connection.", style: .danger)
 		}
 	}
 	

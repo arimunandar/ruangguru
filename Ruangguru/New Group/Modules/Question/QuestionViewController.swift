@@ -115,7 +115,7 @@ class QuestionViewController: UIViewController {
 					self.checkingState = .finishGame
 				}
 			case .finishGame:
-				print("Finish Game")
+				self.collectionView.reloadData()
 			}
 		}
 	}
@@ -128,7 +128,7 @@ class QuestionViewController: UIViewController {
 		}
 	}
 	
-	func prepareData() {
+	private func prepareData() {
 		self.nextButton.isEnabled = false
 		self.nextButton.setTitle("Check Answer!", for: .normal)
 		self.nextButton.addTarget(self, action: #selector(handleNextQuestion), for: .touchUpInside)
@@ -184,6 +184,7 @@ extension QuestionViewController: UICollectionViewDataSource {
 	func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cells", for: indexPath) as! QuestionCollectionViewCell
 		cell.answerLabel.text = self.questions[indexPath.item].html2String
+		
 		switch indexPath.item {
 		case 0:
 			cell.optionLabel.text = "A"
