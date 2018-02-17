@@ -2,7 +2,7 @@
 //  QuestionModel.swift
 //  Ruangguru
 //
-//  Created by GREDU on 2/16/18.
+//  Created by Ari Munandar on 2/16/18.
 //  Copyright (c) 2018 ARTDEV INDONESIA. All rights reserved.
 //  Modify By:  * Ari Munandar
 //              * arimunandar.dev@gmail.com

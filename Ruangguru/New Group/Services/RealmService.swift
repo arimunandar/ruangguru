@@ -2,8 +2,8 @@
 //  RealmService.swift
 //  Ruangguru
 //
-//  Created by GREDU on 2/16/18.
-//  Copyright © 2018 Ari Munandar. All rights reserved.
+//  Created by Ari Munandar on 2/16/18.
+//  Copyright © 2018 ARTDEV INDONESIA. All rights reserved.
 //
 
 import Foundation
