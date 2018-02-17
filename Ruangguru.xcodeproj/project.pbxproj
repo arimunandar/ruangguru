@@ -58,7 +58,6 @@
 		F423725820357D9C00A3F5AC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F423725B20357D9C00A3F5AC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F423725D20357D9C00A3F5AC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F423726320357DBE00A3F5AC /* Ruangguru.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Ruangguru.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F4CED62220386B2D0096D8F4 /* AppRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppRoute.swift; sourceTree = "<group>"; };
 		F4CED62520386B2D0096D8F4 /* CategoryManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryManager.swift; sourceTree = "<group>"; };
 		F4CED62720386B2D0096D8F4 /* QuestionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestionManager.swift; sourceTree = "<group>"; };
@@ -127,7 +126,6 @@
 		F423724520357D9C00A3F5AC = {
 			isa = PBXGroup;
 			children = (
-				F423726320357DBE00A3F5AC /* Ruangguru.playground */,
 				F423725020357D9C00A3F5AC /* Ruangguru */,
 				F423724F20357D9C00A3F5AC /* Products */,
 				B207BAD4181AB73925A6BC07 /* Pods */,
